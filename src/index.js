@@ -25,7 +25,7 @@ class Box extends React.Component{
 class Grid extends React.Component{
   render(){
 
-    const width = (this.props.cols * 15);
+    const width = (this.props.cols * 15); //how many pixels we will have on the grid
     var rowsArr = []
 
     var boxClass = "";
@@ -101,7 +101,7 @@ class Buttons extends React.Component{
 class Main extends React.Component{
   constructor(){
     super();
-
+    //intial setting for speed, row size, col size
     this.speed  = 100;
     this.rows   = 40;
     this.cols   = 40;
