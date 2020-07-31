@@ -2,7 +2,7 @@ body {
   /*background-image: url('./images/back2.png');*/
   background-color: black;
 }
-  
+
 .box {
   display: inline-block;       
   /*border: 1px solid black;*/
@@ -14,8 +14,7 @@ body {
   }
 
 .off {
-  /*background-color: blue;*/
-  
+  /*background-color: black;*/
 }
 
 .on {
@@ -26,25 +25,21 @@ body {
   background: #00CCFF;
 }
 
-.container{
+.buttons-container{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
-  margin: auto;
+  justify-content: center;
 }
 
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
+button {
+  
   color: white;
   padding: 16px 32px;
+  margin-left: 10px;
   text-align: center;
   text-decoration: none;
-  /*display: inline-block;*/
-  font-size: 16px;
-  margin: 15px 2px;
-  width: 120;
+  font-size: 18px;
   transition-duration: 0.4s;
   cursor: pointer;
 }
@@ -62,42 +57,65 @@ body {
   color: black;
 }
 
-
-.button_flex{
-  margin-top: 125px;
-  display: flex;
-  flex-direction: column;
-  
-  
-}
-
 .grid {
-  /*margin: auto;*/
-  margin-left: -100px;
-  margin-right: 50px;
-  margin-top: 60px;
   width: 150px;
   line-height: 0;
-  /*border: 1px solid red;*/
-  outline:1px solid #4CAF50;
-  background-color: black;
-
+  margin: auto;
   
   /*box-shadow: 0px 0px 20px white;*/
-  
+  margin-top: 40px;
+  background-color: black;
+  outline:1px solid #4CAF50;
+  margin-bottom: 40px;
+
 }
   
-h1, h3, h4 {
-  color: white;
-  align-items: center;
-  width: 80%;
+h1, h2, h3, h4 {
+  color: #4CAF50;
+  margin: auto;
+  text-align: center;
+  width: 50%;
   margin-top: 40px;
 }
 
-h2 {
-  color: white;
-  margin-left: 90px;
-  /*margin: auto;*/
-  margin-top: 40px;
+h4 {
   
+}
+
+p{
+  
+  color: #4CAF50;
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+  font-size: 30px;
+}
+
+ol{
+  display: flex;
+  flex-direction: column;
+  color: #4CAF50;
+  width: 50%;
+  margin: auto;
+  margin-top: 40px;
+  font-size: 30px;
+  
+}
+
+.titles{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
+.patterns{
+  display: flex;
+  flex-direction: row;
+  /*justify-content: center;*/
+  justify-content: space-evenly;
+}
+
+img{
+  border: 5px solid #4CAF50;
 }
