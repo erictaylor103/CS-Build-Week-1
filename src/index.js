@@ -109,13 +109,14 @@ class Main extends React.Component{
     
     this.state  = {
       generation: 0,
+      //creates a 40 x 40 grid
       gridFull: Array(this.rows).fill().map(() => Array(this.cols).fill(false)) //Every grid cell is turned off initially
     }
   }
 
   //method to make a copy of "gridFull" and set the state to true if it was false and vice versa
   //this way we toggle the box on and box off css class
-  //now when we click on the squares, the squares clicked will turn green and stay green
+  //now when we click on the circles, the circles clicked will turn green and stay green
   selectBox = (row, col) => {
     let gridCopy = arrayClone(this.state.gridFull);
     gridCopy[row][col] = !gridCopy[row][col];
@@ -131,7 +132,7 @@ class Main extends React.Component{
     let gridCopy = arrayClone(this.state.gridFull);
     for(let i = 0; i < this.rows; i++){
       for(let j = 0; j < this.cols; j++){
-        if(Math.floor(Math.random() * 4) === 1){ //randomly choose whether the square gets turned on or not - between 0 and any number we want (the lower the number the more close the boxes will be) //if the random number equals 1 we set the Gridgull to true
+        if(Math.floor(Math.random() * 9) === 1){ //randomly choose whether the square gets turned on or not - between 0 and any number we want (the lower the number the more close the boxes will be) //if the random number equals 1 we set the Gridfull to true
           //console.log("random method is creating a random number");
           gridCopy[i][j] = true; //now we have a 25% chance of turning on
            
@@ -223,7 +224,8 @@ class Main extends React.Component{
   }
 
   componentDidMount(){
-    this.seed(); //make my seed method run as soon as the page is loaded (when everything loads)
+    this.seed(); 
+    //make my seed method run as soon as the page is loaded (when everything loads)
     //this.playButton();
   }
 
@@ -312,8 +314,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 
